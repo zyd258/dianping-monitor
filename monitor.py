@@ -17,7 +17,7 @@ def save(name, score):
         "门店": name,
         "评分": score
     }])])
-    df.to_csv(FILE, index=False)
+    df.to_csv(FILE, index=False, encoding="utf-8-sig")
 
 def fetch(url):
     with sync_playwright() as p:
